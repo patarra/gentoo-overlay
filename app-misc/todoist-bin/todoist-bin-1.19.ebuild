@@ -26,7 +26,7 @@ src_install() {
 	dodir "/opt"
    	# Using doins -r would strip executable bits from all binaries
 	cp -pPR "${S}" "${D}/opt/${PN}" || die "Failed to copy files"
-	dosym "${EPREFIX}/opt/${PN}/bin/todoist" "/usr/bin/${EXEC_NAME}"
+	dosym "${EPREFIX}/opt/${PN}/todoist" "/usr/bin/${EXEC_NAME}"
     local icon_size
 	for icon_size in 16 32 48 64 128 256 512; do
 		newicon -s "${icon_size}" \
